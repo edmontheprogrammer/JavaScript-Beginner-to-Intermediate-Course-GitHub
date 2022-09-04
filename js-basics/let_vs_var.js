@@ -33,6 +33,16 @@ start();
 // with a lot of properites and methods. The var keyword attaches the 
 // variable to the window object "window.color" outputs 'red'
 // On the otherhand, 'let' keyword does not attach the variable to the 
-// window object. 
+// window object. You should avoid adding things to the window object 
 var color = 'red';
-let age = 7; 
+let age = 7;
+
+// this function is a global function and is added to the window object
+// 'window.sayHi()' this is bad practice
+function sayHi() {
+    console.log('hi');
+}
+
+
+// Remember to avoid using the var keyword in javascript because it 
+// creates variables that a function scope, not block scope. 
